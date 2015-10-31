@@ -1,0 +1,23 @@
+{
+  "name": "seryth",
+  "version": "0.0.1",
+  "description": "Feed finder",
+  "preferGlobal": false,
+  "main": "./lib/index.js",
+  "bin": {},
+  "dependencies": {
+    "mocha": "^2.3.3"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gabesoft/seryth.git"
+  },
+  "author": {
+    "name": "Gabriel Adomnicai",
+    "email": "gabesoft@gmail.com"
+  },
+  "license": "MIT"
+}
