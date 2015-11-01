@@ -1,0 +1,5 @@
+#!/usr/bin/env node 
+
+require('../lib/extract')(null, function(err) {
+    if (err) { console.log(err); }
+});

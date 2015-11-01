@@ -9,8 +9,10 @@
 
 .DS_Store
 .stat-test
+.tern-port
 
 NERD_tree_*
+blogmon/
 lib-cov
 logs
 node_modules

@@ -1,0 +1,26 @@
+#+TITLE: Feed finder
+
+* Purpose
+** Periodically aggregate feeds
+* Blogs structure
+** Feed
+*** Has Posts
+*** Subscribed-by Users
+** Post
+*** Headers to determine date
+- last-modified
+- etag
+* Implementation
+** Extract data from redis
+*** Get all feed ids with ~KEYS feed:id:*~
+*** For each feed
+**** Get feed data with ~GET feed:id:<id>~
+**** Get all post ids with ~ZREVRANGE posts_by_feed:<feed.uri> 0 -1~
+**** For each post
+***** Get feed data with ~GET posts:<post.id>~
+***** Get feed description with ~GET post:<post.id>:desc~
+** Store data in mongo and redis
+*** Create a feed model
+*** Create a post model
+** Build the aggregator
+

@@ -1,23 +1,33 @@
 {
-  "name": "seryth",
-  "version": "0.0.1",
-  "description": "Feed finder",
-  "preferGlobal": false,
-  "main": "./lib/index.js",
+  "author": {
+    "email": "gabesoft@gmail.com",
+    "name": "Gabriel Adomnicai"
+  },
   "bin": {},
   "dependencies": {
-    "mocha": "^2.3.3"
+    "chalk": "^1.1.1",
+    "eyes": "^0.1.8",
+    "feedparser": "^1.1.4",
+    "redis": "^2.3.0",
+    "srunner": "^0.1.12"
   },
+  "description": "Feed finder",
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "^2.3.3",
+    "babel-eslint": "^4.1.3",
+    "eslint": "^1.8.0",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-plugin-react": "^3.6.3",
+    "mpr": "^0.1.15",
+    "node-dev": "^2.7.1"
   },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "name": "seryth",
+  "preferGlobal": false,
   "repository": {
     "type": "git",
     "url": "git@github.com:gabesoft/seryth.git"
   },
-  "author": {
-    "name": "Gabriel Adomnicai",
-    "email": "gabesoft@gmail.com"
-  },
-  "license": "MIT"
+  "version": "0.0.1"
 }

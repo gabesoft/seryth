@@ -1,6 +1,10 @@
 default: test
 
-MOCHA   = node_modules/.bin/mocha -u tdd --check-leaks
+REDIS_SRV = redis-server
+REDIS_CLI = redis-cli
+MOCHA = $(CURDIR)/node_modules/.bin/mocha -u tdd --check-leaks
+BLOGMON_CONF = $(CURDIR)/blogmon/blogmon.conf
+BLOGMON_PORT = -p 6380
 VERSION = $(shell node -pe 'require("./package.json").version')
 
 all: test
@@ -32,6 +36,17 @@ jshint:
 
 loc:
 	@find src/ -name *.js | xargs wc -l
+
+redis-blogmon-start: redis-blogmon-run
+
+redis-blogmon-run:
+	@$(REDIS_SRV) $(BLOGMON_CONF)
+
+redis-blogmon-stop:
+	@$(REDIS_CLI) $(BLOGMON_PORT) shutdown
+
+redis-blogmon-cli:
+	@$(REDIS_CLI) $(BLOGMON_PORT)
 
 setup:
 	@npm install . -d
