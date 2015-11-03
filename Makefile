@@ -1,8 +1,10 @@
 default: test
 
+BIN = $(CURDIR)/node_modules/.bin
 REDIS_SRV = redis-server
 REDIS_CLI = redis-cli
-MOCHA = $(CURDIR)/node_modules/.bin/mocha -u tdd --check-leaks
+MOCHA = $(BIN)/mocha -u tdd --check-leaks
+ESLINT = $(BIN)/eslint 
 BLOGMON_CONF = $(CURDIR)/blogmon/blogmon.conf
 BLOGMON_PORT = -p 6380
 VERSION = $(shell node -pe 'require("./package.json").version')
@@ -30,9 +32,8 @@ test-slow:
 test-all:
 	@NODE_ENV=test $(MOCHA) -R spec test/*.js --timeout 10000
 
-jshint:
-	jshint lib/**
-	jshint test/**
+lint:
+	$(ESLINT) .
 
 loc:
 	@find src/ -name *.js | xargs wc -l

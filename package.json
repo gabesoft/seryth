@@ -8,7 +8,10 @@
     "chalk": "^1.1.1",
     "eyes": "^0.1.8",
     "feedparser": "^1.1.4",
+    "lodash": "^3.10.1",
+    "nconf": "^0.8.2",
     "redis": "^2.3.0",
+    "request": "^2.65.0",
     "srunner": "^0.1.12"
   },
   "description": "Feed finder",

@@ -1,0 +1,9 @@
+{
+    "redis": {
+        "port": 6380,
+        "host": "localhost"
+    },
+    "api": {
+        "url": "http://localhost:8006"
+    }
+}
