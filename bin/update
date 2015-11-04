@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+require('../lib/update')(null, function(err) {
+    if (err) { console.log(err); }
+});
