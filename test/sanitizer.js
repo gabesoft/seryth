@@ -1,7 +1,7 @@
 const expect = require('chai').expect,
       clean = require('../lib/sanitizer');
 
-describe('sanitizer', function() {
+describe('sanitizer', () => {
   it('removes iframes', done => {
     const html = `<html>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/m5_AKjDdqaU" frameborder="0" allowfullscreen="" class="carousel-slide" data-carousel-index="6" tabindex="-1" style="width: 769px;"></iframe>
