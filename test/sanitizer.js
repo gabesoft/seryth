@@ -1,5 +1,6 @@
 const expect = require('chai').expect,
-      clean = require('../lib/sanitizer');
+      clean = require('../lib/sanitizer'),
+      blankUrl = 'about:blank';
 
 describe('sanitizer', () => {
   it('removes iframes', done => {
@@ -8,7 +9,7 @@ describe('sanitizer', () => {
                     <div></div>
                   </html>`;
 
-    clean(html, '', (err, data) => {
+    clean(html, blankUrl, (err, data) => {
       expect(data.trim()).to.eq(`<div></div>`);
       done(err);
     });
@@ -20,7 +21,7 @@ describe('sanitizer', () => {
                     <div></div>
                   </html>`;
 
-    clean(html, '', (err, data) => {
+    clean(html, blankUrl, (err, data) => {
       expect(data.trim()).to.eq(`<div></div>`);
       done(err);
     });
@@ -33,7 +34,7 @@ describe('sanitizer', () => {
                     <div></div>
                   </html>`;
 
-    clean(html, '', (err, data) => {
+    clean(html, blankUrl, (err, data) => {
       expect(data.trim()).to.eq(`<div></div>`);
       done(err);
     });
@@ -81,7 +82,7 @@ describe('sanitizer', () => {
                     <div></div>
                   </html>`;
 
-    clean(html, '', (err, data) => {
+    clean(html, blankUrl, (err, data) => {
       expect(data.trim()).to.eq(`<div></div>`);
       done(err);
     });
@@ -94,7 +95,7 @@ describe('sanitizer', () => {
                     <div></div>
                   </html>`;
 
-    clean(html, '', (err, data) => {
+    clean(html, blankUrl, (err, data) => {
       expect(data.trim()).to.eq(`<div></div>`);
       done(err);
     });

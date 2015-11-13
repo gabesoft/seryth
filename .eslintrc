@@ -6,6 +6,7 @@
         "strict": 0,
         "one-var": 0,
         "indent": 0,
-        "id-length": [2, {"min": 2, "max": 20, "properties": "never", "exceptions": ["$", "x", "y", "_"]}]
+        "id-length": [2, {"min": 2, "max": 20, "properties": "never", "exceptions": ["$", "x", "y", "_"]}],
+        "no-shadow": [2, {"builtinGlobals": false, "hoist": "functions", "allow": [ "_" ]}]
     }
 }
