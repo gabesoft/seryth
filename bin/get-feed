@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var args = process.argv,
+    eyes = require('eyes'),
+    opts = { feedUri: args[2] };
+
+require('../lib/get-feed')(opts, function(err, feed) {
+  eyes.inspect(feed);
+});

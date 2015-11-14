@@ -32,6 +32,9 @@ test-slow:
 test-all:
 	@NODE_ENV=test $(MOCHA) -R spec test/*.js --timeout 10000
 
+lint-fix:
+	$(ESLINT) . --fix
+
 lint:
 	$(ESLINT) .
 
