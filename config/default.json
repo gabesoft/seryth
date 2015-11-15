@@ -12,7 +12,7 @@
     "update": {
         "interval": {
             "unit": "minutes",
-            "value": 5
+            "value": 60
         }
     }
 }
