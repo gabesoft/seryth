@@ -36,7 +36,8 @@ function loadRoutes(cb) {
 function startUpdate() {
   log.info('starting feeds update');
   updateFeeds(null, err => {
-    log.info('feeds update completed');
+    const now = moment().format('MMM Do YYYY, h:mm:ss a');
+    log.info(`feeds update completed on ${chalk.magenta(now)}`);
     if (err) log.error(err.message);
     log.info(`going to sleep for ${chalk.blue(interval.asMinutes())} minutes`);
     setTimeout(startUpdate, interval.asMilliseconds());
