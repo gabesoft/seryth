@@ -8,5 +8,11 @@
     },
     "app": {
         "port": 8008
+    },
+    "update": {
+        "interval": {
+            "unit": "minutes",
+            "value": 5
+        }
     }
 }
