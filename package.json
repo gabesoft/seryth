@@ -20,7 +20,8 @@
     "nconf": "^0.8.2",
     "redis": "^2.3.0",
     "request": "^2.65.0",
-    "srunner": "^0.1.12"
+    "srunner": "^0.1.12",
+    "trans": "0.0.16"
   },
   "description": "Feed finder",
   "devDependencies": {
