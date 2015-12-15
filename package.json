@@ -31,7 +31,7 @@
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.6.3",
     "mocha": "^2.3.3",
-    "mpr": "^0.1.15",
+    "mpr": "^0.1.16",
     "node-dev": "^2.7.1"
   },
   "license": "MIT",
