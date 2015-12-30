@@ -14,5 +14,8 @@
             "unit": "minutes",
             "value": 60
         }
+    },
+    "fetch-feed": {
+        "timeout": 30000
     }
 }
