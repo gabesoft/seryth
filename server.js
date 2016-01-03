@@ -58,8 +58,6 @@ function startTasks(cb) {
 
 function registerPlugins(cb) {
   server.register([{
-    register: require('http-status-decorator')
-  }, {
     register: require('good'),
     options: {
       reporters: [{

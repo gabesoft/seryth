@@ -13,7 +13,6 @@
     "good": "^6.4.0",
     "good-console": "^5.2.0",
     "hapi": "^11.0.3",
-    "http-status-decorator": "0.0.2",
     "iconv": "^2.1.11",
     "joi": "^7.1.0",
     "jquery": "^2.1.4",
