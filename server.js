@@ -1,6 +1,7 @@
 'use strict';
 
 const Hapi = require('hapi'),
+      Boom = require('boom'),
       server = new Hapi.Server({}),
       async = require('async'),
       chalk = require('chalk'),
@@ -10,6 +11,7 @@ const Hapi = require('hapi'),
       updateFeeds = require('./lib/update'),
       conf = require('./config/store'),
       moment = require('moment'),
+      Joi = require('joi'),
       interval = moment.duration(
         conf.get('update:interval:value'),
         conf.get('update:interval:unit'));
@@ -17,7 +19,7 @@ const Hapi = require('hapi'),
 function getFeed(request, reply) {
   get({ feedUri: request.query.uri }, (err, feed) => {
     if (err) {
-      reply.boom(err);
+      reply(Boom.wrap(err, err.statusCode || 500, err.message));
     } else {
       reply(feed);
     }
@@ -28,7 +30,12 @@ function loadRoutes(cb) {
   server.route({
     method: 'GET',
     path: '/feeds',
-    handler: getFeed
+    config: {
+      handler: getFeed,
+      validate: {
+        query: { uri: Joi.string().uri().required() }
+      }
+    }
   });
   cb();
 }
