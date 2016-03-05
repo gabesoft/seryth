@@ -6,10 +6,10 @@ const nconf = require('nconf'),
       root = process.cwd();
 
 nconf.overrides({
-  env: env,
+  env,
   path: {
-    root: root,
-    config: path.join(root, 'config', env) + '.json'
+    root,
+    config: `${path.join(root, 'config', env)}.json`
   }
 });
 
