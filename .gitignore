@@ -21,3 +21,4 @@ pids
 results
 tmp
 .#*
+config/production.json
