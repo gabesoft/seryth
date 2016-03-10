@@ -52,7 +52,7 @@ function startUpdate() {
 }
 
 function startTasks(cb) {
-  startUpdate();
+  setTimeout(startUpdate, 5000);
   cb();
 }
 
