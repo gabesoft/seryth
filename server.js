@@ -83,8 +83,6 @@ function startServer(cb) {
   });
 }
 
-process.setMaxListeners(1000);
-
 async.series([
   setupServer, loadRoutes, registerPlugins, startServer, startTasks
 ], err => {
