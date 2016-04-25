@@ -58,6 +58,8 @@ function startTasks(cb) {
 
 function registerPlugins(cb) {
   server.register([{
+    register: require('pstatus/lib/hapi')
+  }, {
     register: require('good'),
     options: {
       reporters: [{
